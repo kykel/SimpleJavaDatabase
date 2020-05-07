@@ -1,11 +1,11 @@
 FROM alpine/git as clone 
 WORKDIR /clone_output_dir
 RUN git clone https://github.com/kykel/SimpleJavaDatabase.git
-RUN ls -lart /clone_output_dir/java-database_project/javaDatabase
+RUN ls -lart /clone_output_dir/SimpleJavaDatabase
 
 FROM maven:3.5-jdk-8-alpine as build
 WORKDIR /build_output
-COPY --from=clone /clone_output_dir/java-database_project/javaDatabase .
+COPY --from=clone /clone_output_dir/SimpleJavaDatabase .
 RUN mvn clean install
 RUN ls -lart /build_output
 
