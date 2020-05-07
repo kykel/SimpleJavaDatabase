@@ -6,7 +6,7 @@ RUN ls -lart /clone_output_dir/SimpleJavaDatabase
 FROM maven:3.5-jdk-8-alpine as build
 WORKDIR /build_output
 COPY --from=clone /clone_output_dir/SimpleJavaDatabase .
-RUN mvn clean install
+#RUN mvn clean install
 RUN ls -lart /build_output
 
 FROM openjdk:8-jre-alpine
