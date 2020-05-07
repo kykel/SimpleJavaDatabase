@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class UserDatabaseApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UserDatabaseApplication.class, args);
+		//SpringApplication.run(UserDatabaseApplication.class, args);
 	}
 
 }
