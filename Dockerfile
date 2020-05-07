@@ -1,6 +1,6 @@
 FROM alpine/git as clone 
 WORKDIR /clone_output_dir
-RUN git clone https://github.com/kykel/InternshipProject.git
+RUN git clone https://github.com/kykel/SimpleJavaDatabase.git
 RUN ls -lart /clone_output_dir/java-database_project/javaDatabase
 
 FROM maven:3.5-jdk-8-alpine as build
