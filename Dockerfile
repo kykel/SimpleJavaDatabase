@@ -10,7 +10,7 @@ RUN mvn clean install
 RUN ls -lart /build_output
 
 FROM openjdk:8-jre-alpine
-COPY --from=build /build_output/target/javaDatabase-0.0.1-SNAPSHOT.jar /opt/dockertest/
+COPY --from=build /build_output/target/UserDatabase-0.0.1-SNAPSHOT.jar /opt/dockertest/
 RUN ls -lart /opt/dockertest
 EXPOSE 8080:8080
 CMD ["java", "-jar", "/opt/dockertest/javaDatabase-0.0.1-SNAPSHOT.jar"]
